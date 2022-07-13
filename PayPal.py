@@ -1,8 +1,10 @@
-import email
 
 
 class PayPal:
-    id             =str
-    email          =str
     
-    print       = print(vars())
+    id          =str
+    email       =str
+    
+    def __init__(self, id, email):
+        self.email   = email
+        self.id      =id

@@ -1,14 +1,11 @@
-from lib2to3.pgen2 import driver
+from car import car
 
 
-class uberX:
-    id              =str
-    license         =str
-    driver          =str
-    passengers      =int
-    brand           =str
-    model           =str
+class uberX(car):
+    brand   =str
+    model   =str
     
-    print       =print(vars())
-    
-    
+    def __init__(self, license, driver, brand, model):
+          super.__initi__(license, driver)
+          self.brand = brand
+          self.model = model

@@ -1,12 +1,8 @@
-import email
-from unicodedata import name
+from account import Account
 
-
-class user:
-    id          =str
-    name        =int
-    document    =str
-    email       =str
-    password    =str
+class user(Account):
+    id = int
     
-    print       =print(vars())
+    def __init__(self, name, document, mail, password, gender, numberCell, age):
+        super().__init__(name, document, mail, password, gender, numberCell, age)
+        self.id      =id
