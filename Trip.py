@@ -1,16 +1,12 @@
-from http.client import PAYMENT_REQUIRED
-from tokenize import Double
-from user import user
+from car import Car
+from driver import Driver
+from payment import Payment
+from rute import Rute
+from user import User
 
-
-class Trip:
-    id          =str
-    user        =user
-    car         =str
-    route       =str
-    amount      =str
-    payment     =str
-    progress    =str
-    completed   =str
+class Trip(Car, User, Driver, Rute, Payment):
+    idTrip      = int
     
-    print       = print(vars())
+    def __init__(self, idTrip, idUser, idDriver, star, end, kmDistance, typePayment, ammount, date, licence, driver ):
+        super().__init__(idTrip, idUser, idDriver, star, end, kmDistance, typePayment, ammount, date, licence, driver)
+        self.idTrip     = idTrip

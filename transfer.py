@@ -1,6 +1,8 @@
-from payment import payment
-from bank import bank
 
-class tranfer(payment, bank):
-    def _init_(self, id, ammount, bank, identification, numberAccount):
-        super()._init_(id, ammount, bank, identification, numberAccount)
+from bank import Bank
+
+class Transfer(Bank):
+    
+   def __init__(self, id, typePayment, ammount, date, bankName, identification, numberAccount):
+      super().__init__(id, typePayment, ammount, date, bankName, identification, numberAccount)
+        

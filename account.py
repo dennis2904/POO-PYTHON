@@ -1,24 +1,15 @@
-import mailbox
-from unicodedata import name
-
-
-
-class Account :
+class Account() :
     id          = int
     name        = str
-    document    = int
+    document    = str
     mail        = str
     password    = str
-    gender      =str
-    numberCell  =int
-    age         =int
+    gender      = str
+    numberCell  = int
+    age         = int
     
-    #Metodo constructor en Python
-    def __init__(self, name, document, mail, password, gender, numberCell, age):
+    #Metodo Constructor en Python
+    def __init__(self, name, document):
         self.name       = name
-        self.document   = document 
-        self.mail       =mail
-        self.password   =password
-        self.gender     =gender
-        self.numberCell =numberCell
-        self.age        =age
+        self.document   = document
+        

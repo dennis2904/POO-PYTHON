@@ -1,5 +1,6 @@
-from payment import payment
+from payment import Payment
 
-class cash(payment):
-    def _init_(self, id, ammount):
-        super()._init_(id, ammount)
+class Cash(Payment):
+    
+    def __init__(self, id, date, ammount, typePayment):
+        super().__init__(id, ammount, date, typePayment)

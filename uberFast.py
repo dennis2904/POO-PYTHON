@@ -1,17 +1,15 @@
-from pyexpat import model
-from car import car
-from cash import cash 
+from warnings import _catch_warnings_with_records
+from car import Car
 
-class uberFast(car):
+class UberFlash(Car):
+    brand       = str
+    model       = str
+    loadSize    = []
+    loadWeight  = int
     
-   brand           =str
-   model           =str
-   loadSize        =[]
-   loadWeight      =int
-
-def __init__(self, license, driver, brand, model, loadSize, loadWeight):
-        super.__init__(license, driver)
-        self.brand        =brand
-        self.model        =model
-        self.loadSize     =loadSize
-        self.loadWeight   =loadWeight
+    def __init__(self, license, driver, brand, model, loadSize, loadWeigth):
+        super().__init__(license, driver)
+        self.brand      = brand
+        self.model      = model
+        self.loadSize   = loadSize
+        self.loadWeight = loadWeigth

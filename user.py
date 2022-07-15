@@ -1,8 +1,8 @@
 from account import Account
 
-class user(Account):
-    id = int
+class User(Account):
+    idUser = int
     
-    def __init__(self, name, document, mail, password, gender, numberCell, age):
+    def __init__(self, idUser, name, document, mail, password, gender, numberCell, age):
         super().__init__(name, document, mail, password, gender, numberCell, age)
-        self.id      =id
+        self.idUser    = idUser

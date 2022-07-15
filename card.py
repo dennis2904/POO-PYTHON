@@ -1,19 +1,12 @@
+from bank import Bank
 
+class Card(Bank):
+    cardNumber        = int
+    cardSecurityCode  = int
+    cardDate          = int
 
-
-
-from datetime import date
-
-
-class card:
-    
-    id          =str
-    number      =int
-    cvv         =int
-    date        =str
-    
-    def __init__(self, id, number, cvv, date):
-        self.id         = id
-        self.number     =number
-        self.cvv        =cvv
-        self.date       =date
+    def __init__(self, id, ammount, typePayment, date, bankName, identification, numberAccount, cardNumber, cardDate, cardSecurityCode):
+        super().__init__(id, ammount, typePayment, date, bankName, identification, numberAccount)
+        self.cardDate           =   cardDate
+        self.cardNumber         =   cardNumber
+        self.cardSecurityCode   =   cardSecurityCode

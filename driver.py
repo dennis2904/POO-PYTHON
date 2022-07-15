@@ -1,11 +1,10 @@
 from account import Account
 
-class driver(Account):
-    id          = int
-    license     = str
+class Driver(Account):
+    idDriver      = int
+    license = str
     
-    def _init_(self, name, document, mail, Password, gender, numberCell, age):
-        super()._init_(name, document, mail, Password, gender, numberCell, age)
-        
-        self.id             = id
-        self.license        = license
+    def __init__(self, idDriver, license, name, document, mail, password, gender, numberCell, age):
+        super().__init__(name, document, mail, password, gender, numberCell, age)
+        self.idDriver         = idDriver
+        self.license    = license
